@@ -1,0 +1,80 @@
+<style>
+	.tree mk:before{
+		content:"\3147";
+		margin-right: 6px;
+	}
+	.tree, .tree ul{
+		list-style: none;
+	}
+	.tree {
+		margin: 0;
+		padding: 0;
+	}
+
+	/* Style the caret/arrow */
+	.caret {
+		cursor: pointer;
+		user-select: none; /* Prevent text selection */
+	}
+
+	/* Create the caret/arrow with a unicode, and style it */
+	.caret::before {
+		content: "\25B6";
+		color: black;
+		display: inline-block;
+		margin-right: 6px;
+	}
+
+	/* Rotate the caret/arrow icon when clicked on (using JavaScript) */
+	.caret-down::before {
+		transform: rotate(90deg);
+	}
+
+	/* Hide the nested list */
+	.nested {
+		display: none;
+	}
+
+	/* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
+	.active {
+		display: block;
+	}
+</style>
+
+<ul class="tree">
+<li><mk/>
+	<a href="/">HOME</a>
+</mk></li>
+%(posts)s
+</ul>
+
+<script type="text/javascript">
+	/* initialize tree */
+	var toggler = document.getElementsByClassName("caret");
+	var i;
+
+	for (i = 0; i < toggler.length; i++)
+	{
+		toggler[i].addEventListener("click", function()
+		{
+			this.parentElement.querySelector(".nested").classList.toggle("active");
+			this.classList.toggle("caret-down");
+		});
+	}
+
+	/* open current label */
+	var urlToLabels =
+	{
+%(urlToLabels)s
+	};
+
+	const url = new URL(window.location.href);
+	var labels = urlToLabels[url.pathname];
+
+	for (var i = 0; i < labels.length; i++)
+	{
+		var label = document.getElementById(labels[i]);
+		label.parentElement.querySelector(".nested").classList.toggle("active");
+		label.classList.toggle("caret-down");
+	}
+</script>

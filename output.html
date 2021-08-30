@@ -1,0 +1,230 @@
+<style>
+	.tree mk:before{
+		content:"\3147";
+		margin-right: 6px;
+	}
+	.tree, .tree ul{
+		list-style: none;
+	}
+	.tree {
+		margin: 0;
+		padding: 0;
+	}
+
+	/* Style the caret/arrow */
+	.caret {
+		cursor: pointer;
+		user-select: none; /* Prevent text selection */
+	}
+
+	/* Create the caret/arrow with a unicode, and style it */
+	.caret::before {
+		content: "\25B6";
+		color: black;
+		display: inline-block;
+		margin-right: 6px;
+	}
+
+	/* Rotate the caret/arrow icon when clicked on (using JavaScript) */
+	.caret-down::before {
+		transform: rotate(90deg);
+	}
+
+	/* Hide the nested list */
+	.nested {
+		display: none;
+	}
+
+	/* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
+	.active {
+		display: block;
+	}
+</style>
+
+<ul class="tree">
+<li><mk/>
+	<a href="/">HOME</a>
+</mk></li>
+
+<li>
+	<li><span class="caret" id="l-unity"><a href="/search/label/l-unity">Unity</a></span>
+	<ul class="nested">
+
+<li>
+	<li><span class="caret" id="l-unity-shader"><a href="/search/label/l-unity-shader">Shaders</a></span>
+	<ul class="nested">
+
+	</ul>
+</li>
+
+<li>
+	<li><span class="caret" id="l-unity-vr"><a href="/search/label/l-unity-vr">VR</a></span>
+	<ul class="nested">
+
+<li><mk/>
+	<a href="http://lablk.blogspot.com/2017/10/vr-unity-bluetooth-controller_25.html">[VR] Unity : Bluetooth Controller를 사용하여 캐릭터 컨트롤하기</a>
+</mk></li>
+
+<li><mk/>
+	<a href="http://lablk.blogspot.com/2017/10/vr-unity-vr-support.html">[VR] Unity VR Support</a>
+</mk></li>
+
+<li><mk/>
+	<a href="http://lablk.blogspot.com/2017/10/vr-unity-bluetooth-controller.html">[VR] Unity에서 Bluetooth Controller 제어</a>
+</mk></li>
+
+	</ul>
+</li>
+
+	</ul>
+</li>
+
+<li>
+	<li><span class="caret" id="l-mdd"><a href="/search/label/l-mdd">MDD</a></span>
+	<ul class="nested">
+
+<li><mk/>
+	<a href="http://lablk.blogspot.com/2017/07/mdd-uppaal2plc.html">[MDD] UPPAAL2PLC 개선작업</a>
+</mk></li>
+
+<li><mk/>
+	<a href="http://lablk.blogspot.com/2017/07/mdd-automated-plc-application.html">[MDD] Automated PLC Application Generation Solution from UPPAAL Model : UPPAAL2PLC</a>
+</mk></li>
+
+	</ul>
+</li>
+
+<li>
+	<li><span class="caret" id="l-industrial_network"><a href="/search/label/l-industrial_network">Industrial networks</a></span>
+	<ul class="nested">
+
+<li><mk/>
+	<a href="http://lablk.blogspot.com/2018/02/ethercat-igh-ethercat-master-stack-api.html">[EtherCAT] IgH EtherCAT Master Stack API 분석 예제</a>
+</mk></li>
+
+<li><mk/>
+	<a href="http://lablk.blogspot.com/2017/07/ethercat-soem-ethercat.html">[EtherCAT] SOEM을 활용하여 라즈베리파이를 EtherCAT 마스터로 만들기</a>
+</mk></li>
+
+	</ul>
+</li>
+
+<li>
+	<li><span class="caret" id="l-etc"><a href="/search/label/l-etc">etc.</a></span>
+	<ul class="nested">
+
+<li>
+	<li><span class="caret" id="l-etc-jni"><a href="/search/label/l-etc-jni">JNI</a></span>
+	<ul class="nested">
+
+<li><mk/>
+	<a href="http://lablk.blogspot.com/2018/07/jni.html">[JNI] 객체 사용과 메모리 관리</a>
+</mk></li>
+
+<li><mk/>
+	<a href="http://lablk.blogspot.com/2018/06/jni-jni-c-java.html">[JNI] JNI로 C와 Java 연동하기</a>
+</mk></li>
+
+	</ul>
+</li>
+
+<li>
+	<li><span class="caret" id="l-etc-machine_learning"><a href="/search/label/l-etc-machine_learning">Machine learning</a></span>
+	<ul class="nested">
+
+<li><mk/>
+	<a href="http://lablk.blogspot.com/2017/10/machine-learning-mldivide-linear.html">[Machine Learning] mldivide ('\')를 활용한 linear regression</a>
+</mk></li>
+
+	</ul>
+</li>
+
+<li>
+	<li><span class="caret" id="l-etc-build_system"><a href="/search/label/l-etc-build_system">Build systems</a></span>
+	<ul class="nested">
+
+<li><mk/>
+	<a href="http://lablk.blogspot.com/2017/10/build-system-windows-arm-standalone.html">[Build System] Windows 플랫폼에서 ARM Linux 크로스 컴파일 환경 Standalone으로 구성</a>
+</mk></li>
+
+<li><mk/>
+	<a href="http://lablk.blogspot.com/2017/10/build-system-cmake-x8664-linux-arm-linux.html">[Build System] cmake에서 크로스 컴파일러(툴체인) 사용하기 (x86_64 Linux에서 ARM Linux 실행 파일 빌드)</a>
+</mk></li>
+
+<li><mk/>
+	<a href="http://lablk.blogspot.com/2017/07/project-build-cmake-windows-linux.html">[Build System] cmake를 활용하여 windows와 linux 모두에서 빌드 가능한 프로젝트 만들기</a>
+</mk></li>
+
+	</ul>
+</li>
+
+<li>
+	<li><span class="caret" id="l-etc-etc"><a href="/search/label/l-etc-etc">etc.</a></span>
+	<ul class="nested">
+
+<li><mk/>
+	<a href="http://lablk.blogspot.com/2018/05/font-display-programming-for-embedded.html">Font display programming for embedded devices (pixel-based)</a>
+</mk></li>
+
+	</ul>
+</li>
+
+	</ul>
+</li>
+
+</ul>
+
+<script type="text/javascript">
+	/* initialize tree */
+	var toggler = document.getElementsByClassName("caret");
+	var i;
+
+	for (i = 0; i < toggler.length; i++)
+	{
+		toggler[i].addEventListener("click", function()
+		{
+			this.parentElement.querySelector(".nested").classList.toggle("active");
+			this.classList.toggle("caret-down");
+		});
+	}
+
+	/* open current label */
+	var urlToLabels =
+	{
+"/search/label/l-unity-shader" : [ "l-unity", "l-unity-shader" ],
+"/2017/10/vr-unity-bluetooth-controller_25.html" : [ "l-unity", "l-unity-vr" ],
+"/2017/10/vr-unity-vr-support.html" : [ "l-unity", "l-unity-vr" ],
+"/2017/10/vr-unity-bluetooth-controller.html" : [ "l-unity", "l-unity-vr" ],
+"/search/label/l-unity-vr" : [ "l-unity", "l-unity-vr" ],
+"/search/label/l-unity" : [ "l-unity" ],
+"/2017/07/mdd-uppaal2plc.html" : [ "l-mdd" ],
+"/2017/07/mdd-automated-plc-application.html" : [ "l-mdd" ],
+"/search/label/l-mdd" : [ "l-mdd" ],
+"/2018/02/ethercat-igh-ethercat-master-stack-api.html" : [ "l-industrial_network" ],
+"/2017/07/ethercat-soem-ethercat.html" : [ "l-industrial_network" ],
+"/search/label/l-industrial_network" : [ "l-industrial_network" ],
+"/2018/07/jni.html" : [ "l-etc", "l-etc-jni" ],
+"/2018/06/jni-jni-c-java.html" : [ "l-etc", "l-etc-jni" ],
+"/search/label/l-etc-jni" : [ "l-etc", "l-etc-jni" ],
+"/2017/10/machine-learning-mldivide-linear.html" : [ "l-etc", "l-etc-machine_learning" ],
+"/search/label/l-etc-machine_learning" : [ "l-etc", "l-etc-machine_learning" ],
+"/2017/10/build-system-windows-arm-standalone.html" : [ "l-etc", "l-etc-build_system" ],
+"/2017/10/build-system-cmake-x8664-linux-arm-linux.html" : [ "l-etc", "l-etc-build_system" ],
+"/2017/07/project-build-cmake-windows-linux.html" : [ "l-etc", "l-etc-build_system" ],
+"/search/label/l-etc-build_system" : [ "l-etc", "l-etc-build_system" ],
+"/2018/05/font-display-programming-for-embedded.html" : [ "l-etc", "l-etc-etc" ],
+"/search/label/l-etc-etc" : [ "l-etc", "l-etc-etc" ],
+"/search/label/l-etc" : [ "l-etc" ],
+
+	};
+
+	const url = new URL(window.location.href);
+	var labels = urlToLabels[url.pathname];
+
+	for (var i = 0; i < labels.length; i++)
+	{
+		var label = document.getElementById(labels[i]);
+		label.parentElement.querySelector(".nested").classList.toggle("active");
+		label.classList.toggle("caret-down");
+	}
+</script>

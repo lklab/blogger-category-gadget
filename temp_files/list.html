@@ -1,0 +1,200 @@
+
+<style>
+  .tree mk:before{
+    content:"\3147";
+    margin-right: 6px;
+  }
+  .tree, .tree ul{
+    list-style: none;
+  }
+
+  /* Style the caret/arrow */
+  .caret {
+    cursor: pointer;
+    user-select: none; /* Prevent text selection */
+  }
+
+  /* Create the caret/arrow with a unicode, and style it */
+  .caret::before {
+    content: "\25B6";
+    color: black;
+    display: inline-block;
+    margin-right: 6px;
+  }
+
+  /* Rotate the caret/arrow icon when clicked on (using JavaScript) */
+  .caret-down::before {
+    transform: rotate(90deg);
+  }
+
+  /* Hide the nested list */
+  .nested {
+    display: none;
+  }
+
+  /* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
+  .active {
+    display: block;
+  }
+</style>
+
+<ul class="tree">
+<li><mk/>
+  <a href="/">HOME</a>
+</mk></li>
+<li>
+  <span class="caret" id="unity" />
+  <a href="/search/label/Unity">Unity</a>
+  <ul class="nested">
+    <li><mk/>
+      <a href="/2017/10/vr-unity-bluetooth-controller_25.html">
+        Unity : Bluetooth Controller를 사용하여 캐릭터 컨트롤하기
+      </a>
+    </mk></li>
+    <li><mk/>
+      <a href="/2017/10/vr-unity-vr-support.html">
+        Unity VR Support
+      </a>
+    </mk></li>
+    <li><mk/>
+      <a href="/2017/10/vr-unity-bluetooth-controller.html">
+        Unity에서 Bluetooth Controller 제어
+      </a>
+    </mk></li>
+  </ul>
+</li>
+<li>
+  <span class="caret" id="unity2" />
+  <a href="/search/label/Unity">Unity2</a>
+  <ul class="nested">
+    <li><mk/>
+      <a href="/2017/10/vr-unity-bluetooth-controller_25.html">
+        Unity : Bluetooth Controller를 사용하여 캐릭터 컨트롤하기
+      </a>
+    </mk></li>
+    <li><mk/>
+      <a href="/2017/10/vr-unity-vr-support.html">
+        Unity VR Support
+      </a>
+    </mk></li>
+    <li><mk/>
+      <a href="/2017/10/vr-unity-bluetooth-controller.html">
+        Unity에서 Bluetooth Controller 제어
+      </a>
+    </mk></li>
+  </ul>
+</li>
+<li>
+  <input type="checkbox" id="mdd" />
+  <label for="mdd">
+    <a href="/search/label/MDD">MDD</a>
+  </label>
+  <ul>
+    <li><mk/>
+      <a href="/2017/07/mdd-uppaal2plc.html">
+        UPPAAL2PLC 개선작업
+      </a>
+    </mk></li>
+    <li><mk/>
+      <a href="/2017/07/mdd-automated-plc-application.html">
+        Automated PLC Application Generation Solution from UPPAAL Model : UPPAAL2PLC
+      </a>
+    </mk></li>
+  </ul>
+</li>
+<li>
+  <input type="checkbox" id="ethercat" />
+  <label for="ethercat">
+    <a href="/search/label/EtherCAT">EtherCAT</a>
+  </label>
+  <ul>
+    <li><mk/>
+      <a href="/2018/02/ethercat-igh-ethercat-master-stack-api.html">
+        IgH EtherCAT Master Stack API 분석 예제
+      </a>
+    </mk></li>
+    <li><mk/>
+      <a href="/2017/07/ethercat-soem-ethercat.html">
+        SOEM을 활용하여 라즈베리파이를 EtherCAT 마스터로 만들기
+      </a>
+    </mk></li>
+  </ul>
+</li>
+<li>
+  <input type="checkbox" id="etc" checked/>
+  <label for="etc">
+    <a href="/search/label/etc">etc.</a>
+  </label>
+  <ul>
+    <li><mk/>
+      <a href="/2018/07/jni.html">
+        [JNI] 객체 사용과 메모리 관리
+      </a>
+    </mk></li>
+    <li><mk/>
+      <a href="/2018/06/jni-jni-c-java.html">
+        [JNI] JNI로 C와 Java 연동하기
+      </a>
+    </mk></li>
+    <li><mk/>
+      <a href="/2018/05/font-display-programming-for-embedded.html">
+        Font display programming for embedded device (pixel-based)
+      </a>
+    </mk></li>
+    <li><mk/>
+      <a href="/2017/10/build-system-windows-arm-standalone.html">
+        Windows 플랫폼에서 ARM 크로스 컴파일 환경 Standalone으로 구성
+      </a>
+    </mk></li>
+    <li><mk/>
+      <a href="/2017/10/build-system-cmake-x8664-linux-arm-linux.html">
+        cmake에서 크로스 컴파일러(툴체인) 사용하기 (x86_64 Linux에서 ARM Linux 빌드)
+      </a>
+    </mk></li>
+    <li><mk/>
+      <a href="/2017/10/machine-learning-mldivide-linear.html">
+        mldivide ('\')를 활용한 linear regression
+      </a>
+    </mk></li>
+    <li><mk/>
+      <a href="/2017/07/project-build-cmake-windows-linux.html">
+        cmake를 활용하여 windows와 linux 모두에서 빌드 가능한 프로젝트 만들기
+      </a>
+    </mk></li>
+  </ul>
+</li>
+</ul>
+
+<script type="text/javascript">
+  var toggler = document.getElementsByClassName("caret");
+  var i;
+
+  for (i = 0; i < toggler.length; i++)
+  {
+    toggler[i].addEventListener("click", function()
+    {
+      this.parentElement.querySelector(".nested").classList.toggle("active");
+      this.classList.toggle("caret-down");
+    });
+  }
+  var _unity = document.getElementById("unity");
+  _unity.parentElement.querySelector(".nested").classList.toggle("active");
+  _unity.classList.toggle("caret-down");
+</script>
+
+<script type="text/javascript">
+  const url = new URL(window.location.href);
+  document.write(url.pathname);
+
+  var inputMDD = document.getElementById("mdd");
+  var inputETC = document.getElementById("etc");
+  inputMDD.setAttribute("checked", true);
+  inputETC.checked = true;
+
+  var dict =
+  {
+    "one": "aaa",
+    "two": "bbb",
+  };
+  document.write(dict["two"]);
+</script>
