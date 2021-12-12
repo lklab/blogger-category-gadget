@@ -13,6 +13,7 @@ categories = \
 		"sub" :
 		[
 			{"label" : "shader", "name" : "Shaders"},
+			{"label" : "plugin", "name" : "Plugin"},
 			{"label" : "vr",     "name" : "VR"}
 		]
 	},
